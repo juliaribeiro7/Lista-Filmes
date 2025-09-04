@@ -21,12 +21,12 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerViewFilmes)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Adiciona filmes de exemplo à lista
+        
         carregarFilmes()
 
-        // Configura o adaptador
+        
         adapter = FilmeAdapter(listaFilmes) { filme ->
-            // Ação ao clicar em um filme
+            
             Toast.makeText(this, "Filme selecionado: ${filme.titulo}", Toast.LENGTH_SHORT).show()
         }
 
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun carregarFilmes() {
-        // Adiciona alguns filmes de exemplo
+        
         listaFilmes.add(Filme(1, "O Poderoso Chefão", 1972, "Drama/Crime", "Francis Ford Coppola"))
         listaFilmes.add(Filme(2, "Pulp Fiction", 1994, "Crime/Drama", "Quentin Tarantino"))
         listaFilmes.add(Filme(3, "O Senhor dos Anéis: A Sociedade do Anel", 2001, "Fantasia/Aventura", "Peter Jackson"))
